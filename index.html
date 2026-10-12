@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="google-site-verification" content="1yV7LFUzZfziu5pvVMzH4kzJnW1s3f6ndtXKopKgf-c" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn about Free Fire Panel APK, sensitivity settings, HUD layouts, gameplay tips, and Android safety in this simple guide.">
+  <meta name="theme-color" content="#101116">
+  <title>Free Fire Panel APK - Gameplay Settings Guide</title>
+
+  <style>
+    :root {
+      --bg: #101116;
+      --surface: #191b23;
+      --surface-light: #222530;
+      --text: #f7f7fa;
+      --muted: #b1b5c3;
+      --accent: #ff963d;
+      --accent-hover: #ffb36e;
+      --border: #303340;
+      --max-width: 1160px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 95px;
+    }
+
+    body {
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin-inline: auto;
+    }
+
+    /* Header */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(16, 17, 22, 0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(14px);
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      color: var(--text);
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -0.7px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #17120e !important;
+      padding: 10px 17px;
+      border-radius: 8px;
+      font-weight: 700 !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 90px 0 75px;
+      background:
+        radial-gradient(ellipse at 80% 10%, #4b2b1c55, transparent 40%),
+        linear-gradient(135deg, #151720, #101116 75%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--accent);
+      background: #ff963d15;
+      border: 1px solid #ff963d42;
+      border-radius: 50px;
+      padding: 5px 13px;
+      margin-bottom: 22px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 59px);
+      line-height: 1.14;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 660px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 21px;
+      border-radius: 9px;
+      font-weight: 750;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #17120e;
+    }
+
+    .btn-primary:hover {
+      color: #17120e;
+      background: var(--accent-hover);
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--surface);
+    }
+
+    .hero-card {
+      position: relative;
+      padding: 30px;
+      background: linear-gradient(145deg, #242630, #181a22);
+      border: 1px solid #41404a;
+      border-radius: 22px;
+      box-shadow: 0 25px 70px #00000035;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background: #ff963d18;
+      border-radius: 50%;
+      filter: blur(10px);
+      top: -65px;
+      right: -55px;
+    }
+
+    .hero-icon {
+      width: 64px;
+      height: 64px;
+      display: grid;
+      place-items: center;
+      background: #ff963d1d;
+      border: 1px solid #ff963d55;
+      border-radius: 17px;
+      color: var(--accent);
+      font-size: 30px;
+      margin-bottom: 23px;
+    }
+
+    .hero-card h2 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .hero-card p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .feature-list {
+      list-style: none;
+    }
+
+    .feature-list li {
+      border-top: 1px solid var(--border);
+      padding: 11px 0;
+      color: #e5e6ec;
+      font-size: 14px;
+    }
+
+    .feature-list li::before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: 800;
+      margin-right: 10px;
+    }
+
+    /* Main article */
+    .main-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 285px;
+      gap: 35px;
+      align-items: start;
+      padding-top: 65px;
+      padding-bottom: 80px;
+    }
+
+    .article {
+      min-width: 0;
+    }
+
+    .article-section {
+      margin-bottom: 48px;
+      scroll-margin-top: 105px;
+    }
+
+    .article h2 {
+      font-size: clamp(24px, 3vw, 31px);
+      line-height: 1.3;
+      letter-spacing: -0.7px;
+      margin-bottom: 18px;
+    }
+
+    .article h2::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 5px;
+      margin-top: 13px;
+    }
+
+    .article p {
+      color: #c3c6d0;
+      margin-bottom: 18px;
+    }
+
+    .article strong {
+      color: #fff;
+    }
+
+    .article ul,
+    .article ol {
+      padding-left: 24px;
+      margin: 16px 0 22px;
+      color: #c3c6d0;
+    }
+
+    .article li {
+      margin-bottom: 10px;
+      padding-left: 4px;
+    }
+
+    .article li::marker {
+      color: var(--accent);
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: sticky;
+      top: 100px;
+    }
+
+    .side-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 23px;
+      margin-bottom: 20px;
+    }
+
+    .side-card h3 {
+      font-size: 17px;
+      margin-bottom: 15px;
+    }
+
+    .toc {
+      list-style: none;
+    }
+
+    .toc li {
+      margin: 0;
+      border-bottom: 1px solid #30323c;
+    }
+
+    .toc li:last-child {
+      border-bottom: 0;
+    }
+
+    .toc a {
+      display: block;
+      color: var(--muted);
+      padding: 9px 0;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .toc a:hover {
+      color: var(--accent);
+    }
+
+    .side-card p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .side-link {
+      display: block;
+      text-align: center;
+      background: var(--accent);
+      color: #17120e;
+      padding: 11px;
+      border-radius: 8px;
+      font-weight: 750;
+      font-size: 14px;
+    }
+
+    .side-link:hover {
+      color: #17120e;
+      background: var(--accent-hover);
+    }
+
+    /* Safety notice */
+    .notice {
+      background: #ff963d0c;
+      border: 1px solid #ff963d45;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 25px 0;
+    }
+
+    .notice h3 {
+      font-size: 17px;
+      margin-bottom: 7px;
+      color: var(--accent);
+    }
+
+    .notice p {
+      margin-bottom: 0;
+    }
+
+    /* Bottom CTA */
+    .bottom-cta {
+      padding: 55px 25px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at top, #ff963d1b, transparent 65%),
+        var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      margin-bottom: 70px;
+    }
+
+    .bottom-cta h2 {
+      font-size: clamp(25px, 4vw, 35px);
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .bottom-cta p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 auto 25px;
+    }
+
+    /* Footer */
+    .footer {
+      background: #0b0c10;
+      border-top: 1px solid var(--border);
+      padding: 48px 0 22px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 35px;
+    }
+
+    .footer h3 {
+      font-size: 17px;
+      margin-bottom: 14px;
+    }
+
+    .footer p {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 360px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin: 7px 0;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .copyright {
+      border-top: 1px solid var(--border);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      color: #858997;
+      font-size: 12px;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .hero-card {
+        max-width: 600px;
+      }
+
+      .main-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 18px;
+      }
+
+      .side-card {
+        margin-bottom: 0;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      .nav {
+        min-height: 68px;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 14px 0;
+      }
+
+      .logo {
+        font-size: 19px;
+      }
+
+      .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+      }
+
+      .nav-links li:nth-child(2),
+      .nav-links li:nth-child(3) {
+        display: none;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+      }
+
+      .nav-cta {
+        padding: 8px 11px;
+      }
+
+      .hero {
+        padding: 60px 0 48px;
+      }
+
+      h1 {
+        letter-spacing: -1.3px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .hero-card {
+        padding: 23px;
+      }
+
+      .main-layout {
+        padding-top: 42px;
+        padding-bottom: 50px;
+      }
+
+      .article-section {
+        margin-bottom: 38px;
+      }
+
+      .sidebar {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .bottom-cta {
+        padding: 38px 20px;
+        margin-bottom: 45px;
+      }
+
+      .copyright {
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#home">
+        FREE FIRE <span>PANEL</span>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#settings">Settings</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li>
+            <a class="nav-cta"
+               href="https://freefirepanels.com/"
+               target="_blank"
+               rel="noopener noreferrer">
+              Explore Guide ↗
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Android Gaming Guide</span>
+
+        <h1>
+          Free Fire Panel APK:
+          <span>A Simple Guide</span>
+          for Better Gameplay
+        </h1>
+
+        <p>
+          Learn about sensitivity settings, HUD layouts, comfortable
+          controls, and useful gameplay tips. Explore the basics and
+          choose a setup that fits your Android device and playing style.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#introduction" class="btn btn-primary">
+            Read the Guide →
+          </a>
+
+          <a href="#settings" class="btn btn-secondary">
+            Explore Settings
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-icon" aria-hidden="true">🎮</div>
+
+        <h2>Build Your Own Setup</h2>
+
+        <p>
+          Every player and Android device is different. Start with
+          comfortable settings and adjust them through practice.
+        </p>
+
+        <ul class="feature-list">
+          <li>Sensitivity settings explained</li>
+          <li>HUD layout tips for beginners</li>
+          <li>Practical gameplay suggestions</li>
+          <li>Third-party app safety guidance</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="container main-layout">
+
+    <article class="article">
+
+      <section class="article-section" id="introduction">
+        <h2>Introduction</h2>
+
+        <p>
+          Free Fire is a popular mobile battle royale game where players
+          need quick reactions, good aim, and comfortable controls.
+          Many players want to improve their gameplay by adjusting
+          sensitivity, control layouts, and other settings. However,
+          finding the right setup can be difficult, especially for
+          beginners who are still learning how different settings work.
+          <a href="https://freefirepanels.com/"
+             target="_blank"
+             rel="noopener noreferrer">https://freefirepanels.com/</a>
+        </p>
+
+        <p>
+          <strong>Free Fire Panel APK</strong> is a topic of interest
+          for players looking for information about gameplay settings
+          and customization options. Before choosing any tool or
+          application, it is helpful to understand what it offers,
+          how settings affect gameplay, and what to consider when
+          using third-party apps.
+        </p>
+      </section>
+
+      <section class="article-section" id="what-is">
+        <h2>What Is Free Fire Panel APK?</h2>
+
+        <p>
+          Free Fire Panel APK is commonly associated with Free Fire
+          and Free Fire MAX players who are interested in sensitivity
+          settings, HUD layouts, and control preferences. Players often
+          search for information about these options because they want
+          a setup that feels comfortable on their Android devices.
+        </p>
+
+        <p>
+          A suitable gaming setup can make it easier to control
+          movement, aim at opponents, and react during matches.
+          However, results depend on the device, the player's
+          experience, and the settings being used. No application
+          or configuration can guarantee better performance for every
+          player.
+        </p>
+
+        <p>
+          It is also important to check an application's features
+          before installing it. Do not assume that every app described
+          as a Free Fire panel is official or safe.
+        </p>
+      </section>
+
+      <section class="article-section" id="settings">
+        <h2>Why Are Sensitivity Settings Important?</h2>
+
+        <p>
+          Sensitivity settings control how quickly the camera and aim
+          respond when you move your finger across the screen.
+          Choosing suitable values can help you feel more comfortable
+          while aiming and moving around the game.
+        </p>
+
+        <p>
+          High sensitivity allows faster movement, but it may make
+          precise aiming more difficult. Low sensitivity offers slower
+          movement, which some players prefer for better control, but
+          it can feel less responsive during fast fights.
+        </p>
+
+        <p>
+          The best approach is to begin with settings that feel
+          manageable and adjust them gradually. Change one setting
+          at a time and test it in training mode before using it
+          in regular matches.
+        </p>
+      </section>
+
+      <section class="article-section" id="hud">
+        <h2>How to Choose the Right HUD Layout</h2>
+
+        <p>
+          HUD stands for Heads-Up Display. It refers to the placement
+          of buttons and other controls on the screen. A comfortable
+          HUD layout helps players reach important buttons without
+          unnecessary finger movement.
+        </p>
+
+        <p>
+          For example, some players prefer larger fire buttons, while
+          others prefer moving buttons to different positions. The
+          right arrangement depends on screen size, hand position,
+          and whether you play with two, three, or four fingers.
+        </p>
+
+        <p>Here are some simple tips for choosing a HUD layout:</p>
+
+        <ul>
+          <li>Keep important buttons within easy reach.</li>
+          <li>Use button sizes that are comfortable for your fingers.</li>
+          <li>Avoid placing buttons too close together.</li>
+          <li>Test your layout in training mode.</li>
+          <li>Make small changes instead of changing everything at once.</li>
+        </ul>
+
+        <p>
+          A simple and comfortable layout is often more useful than
+          copying a professional player's exact setup.
+        </p>
+      </section>
+
+      <section class="article-section" id="gameplay-tips">
+        <h2>Tips for Improving Free Fire Gameplay</h2>
+
+        <p>
+          You do not always need additional applications to improve
+          your gaming experience. Practising regularly and learning
+          the game's available settings can also help.
+        </p>
+
+        <ol>
+          <li>
+            <strong>Practise your aim:</strong>
+            Spend time in training mode to improve accuracy and
+            become familiar with your sensitivity settings.
+          </li>
+
+          <li>
+            <strong>Adjust settings slowly:</strong>
+            Avoid changing many values at the same time. Small
+            adjustments make it easier to understand what works.
+          </li>
+
+          <li>
+            <strong>Check device performance:</strong>
+            Close unnecessary background applications and keep enough
+            storage space available. Performance can vary depending
+            on your phone's hardware and software.
+          </li>
+
+          <li>
+            <strong>Find comfortable controls:</strong>
+            Choose a button arrangement that matches your playing
+            style and feels natural during combat.
+          </li>
+
+          <li>
+            <strong>Learn from experience:</strong>
+            Review your gameplay and identify situations where your
+            aim, movement, or reaction time needs improvement.
+          </li>
+        </ol>
+
+        <p>
+          Consistency and practice are important parts of developing
+          better gameplay skills.
+        </p>
+      </section>
+
+      <section class="article-section" id="safety">
+        <h2>Is Free Fire Panel APK Safe to Use?</h2>
+
+        <p>
+          Safety should be a priority when searching for any APK file.
+          Third-party applications may request unnecessary permissions,
+          contain unwanted software, or affect your device's security.
+        </p>
+
+        <p>
+          Before installing an application, check its source,
+          developer information, permissions, and available user
+          feedback. Avoid unknown download links and files that ask
+          you to disable important security protections.
+        </p>
+
+        <div class="notice">
+          <h3>Stay Safe While Gaming</h3>
+          <p>
+            Tools that modify game files, automate actions, or provide
+            unfair advantages may put your account at risk. Using
+            official in-game settings is generally the safer choice.
+            Never share your game password or account details with an
+            unknown application or website.
+          </p>
+        </div>
+
+        <p>
+          You should also consider the game's official rules. Always
+          review the permissions and behaviour of a third-party app
+          before deciding whether to install it.
+        </p>
+      </section>
+
+      <section class="article-section" id="learn-more">
+        <h2>Where Can You Learn More About Free Fire Panel?</h2>
+
+        <p>
+          Players who want to explore this topic can visit
+          <a href="https://freefirepanels.com/"
+             target="_blank"
+             rel="noopener noreferrer">Free Fire Panels</a>
+          to find information related to Free Fire Panel APK and its
+          associated gameplay settings.
+        </p>
+
+        <p>
+          Before following any instructions, read the available
+          information carefully and verify whether the described
+          features match your needs. Check compatibility with your
+          Android device and consider the possible risks of
+          third-party software.
+        </p>
+
+        <p>
+          Remember that a website discussing an application does not
+          automatically mean that the application is officially
+          approved by the game developer.
+        </p>
+      </section>
+
+      <section class="article-section" id="conclusion">
+        <h2>Final Thoughts</h2>
+
+        <p>
+          Free Fire Panel APK is a search topic for players interested
+          in sensitivity settings, HUD customization, and improving
+          their overall gaming setup. Understanding these options can
+          help you make better decisions about your controls and
+          playing style.
+        </p>
+
+        <p>
+          Start with comfortable settings, practise regularly, and
+          make gradual adjustments based on your experience. Always
+          check the safety of third-party applications and follow
+          the game's rules.
+        </p>
+
+        <p>
+          A good setup should support your skills rather than replace
+          practice. With patience, consistent training, and sensible
+          settings, you can work toward a more comfortable and
+          enjoyable Free Fire experience.
+        </p>
+      </section>
+
+      <!-- Bottom CTA -->
+      <section class="bottom-cta">
+        <h2>Ready to Explore Free Fire Panel?</h2>
+
+        <p>
+          Read more about Free Fire Panel and explore information
+          about gameplay settings before choosing a setup for your
+          Android device.
+        </p>
+
+        <a class="btn btn-primary"
+           href="https://freefirepanels.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Visit Free Fire Panels ↗
+        </a>
+      </section>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Article sidebar">
+
+      <div class="side-card">
+        <h3>Table of Contents</h3>
+
+        <ul class="toc">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#what-is">What Is Free Fire Panel APK?</a></li>
+          <li><a href="#settings">Sensitivity Settings</a></li>
+          <li><a href="#hud">HUD Layout Guide</a></li>
+          <li><a href="#gameplay-tips">Gameplay Tips</a></li>
+          <li><a href="#safety">App Safety</a></li>
+          <li><a href="#learn-more">Learn More</a></li>
+          <li><a href="#conclusion">Final Thoughts</a></li>
+        </ul>
+      </div>
+
+      <div class="side-card">
+        <h3>Explore the Website</h3>
+
+        <p>
+          Visit Free Fire Panels to explore more information
+          related to the topic.
+        </p>
+
+        <a class="side-link"
+           href="https://freefirepanels.com/"
+           target="_blank"
+           rel="noopener noreferrer">
+          Explore More ↗
+        </a>
+      </div>
+
+    </aside>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <a class="logo" href="#home">
+            FREE FIRE <span>PANEL</span>
+          </a>
+
+          <p style="margin-top: 15px;">
+            A simple informational guide to gameplay settings,
+            HUD layouts, sensitivity, and responsible use of
+            third-party Android applications.
+          </p>
+        </div>
+
+        <div>
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#settings">Sensitivity Settings</a></li>
+            <li><a href="#hud">HUD Layout</a></li>
+            <li><a href="#gameplay-tips">Gameplay Tips</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Useful Information</h3>
+
+          <ul class="footer-links">
+            <li><a href="#safety">App Safety</a></li>
+            <li><a href="#learn-more">Learn More</a></li>
+            <li>
+              <a href="https://freefirepanels.com/"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Official Website Link ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        <span>
+          © <span id="year">2026</span> Free Fire Panel Guide.
+          All rights reserved.
+        </span>
+
+        <span>
+          Independent informational content. Not affiliated with
+          or endorsed by Garena.
+        </span>
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
